@@ -1,0 +1,1 @@
+web: gunicorn methodebacfrancais.wsgi --log-file -
