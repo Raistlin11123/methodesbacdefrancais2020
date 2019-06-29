@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'uc(7q3_dt9$uzhsom3a1+cvgb^&p!loty$2qy*^dqc07g409^x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['methodesbacdefrancais2020.herokuapp.com', 'localhost',]
 
