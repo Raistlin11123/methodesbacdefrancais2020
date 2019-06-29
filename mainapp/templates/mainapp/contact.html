@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+        <div class="row">
+                
+                <!-- Article main content -->
+                <article class="col-xs-9 maincontent">
+                    <header class="page-header">
+                        <h1 class="page-title">Contactez-nous</h1>
+                    </header>
+                    <p class="">Des questions? Des idées pour améliorer nos méthodes? Vous êtes le bienvenu pour partager vos ressentis. Laissez-nous simplement quelques jours pour répondre.</p>
+					<hr>		
+                    <form method="post" action="contact">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <hr>                        
+                        <div class="col-sm-12 text-right">
+                            <button class="btn btn-action" type="submit">Envoyer</button>
+                        </div>
+                    </form>
+	
+				
+			</article> <!-- /Article -->
+            <!-- Info complémentaires-->
+            <!--
+            <aside class="col-sm-3 sidebar sidebar-right">
+
+				<div class="widget">
+					<h4>Address</h4>
+					<address>
+						2002 Holcombe Boulevard, Houston, TX 77030, USA
+					</address>
+					<h4>Phone:</h4>
+					<address>
+						(713) 791-1414
+					</address>
+				</div>
+
+			</aside>
+            -->
+			<!-- /Sidebar -->
+            
+
+		</div>
+
+{% endblock %}

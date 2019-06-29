@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+        <div class="row">
+                
+                <!-- Article main content -->
+                <article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">La question de corpus</h1>
+				</header>
+
+				<h3 id='e1'>Étape 1 : Analyser la question</h3>
+				<p>C’est une étape très importante : repérez le sujet (de quoi parle-t-on ?), puis soulignez les mots-clés et cherchez les points de cours et procédés littéraires visés et suggérés par chacun d’entre eux.</p>
+				<h3 id='e2'>Étape 2 : Lecture des textes</h3>
+				<p>Il faut lire chaque texte, puis l’étudier de façon linéaire en se concentrant sur les procédés concernés pour trouver des éléments de réponse à la question.</p>
+				<h3 id='e3'>Étape 3 : Comparer les textes</h3>
+				<p>Il s’agit mettre en évidence les points communs et les différences entre les textes, sans jamais perdre de vue la question.</p>
+                <p>Vous pouvez procéder sous la forme d’un tableau. On remplira alors les cases en fonction des mots-clés de la question, du genre et du type de texte (ex : versiﬁcation, forme poétique ; point de vue dans le roman...). Le dernier rang du tableau doit toujours revenir vers la question (reprendre les éléments de l’étape 1).</p>
+				<br>
+                <!--Table1-->
+                <table id="tablePreview" class="table table-bordered">
+                <!--Table head-->
+                <thead>
+                    <tr>
+                    <th>#</th>
+                    <th>Texte 1</th>
+                    <th>Texte 2</th>
+                    <th>Texte 3</th>
+                    </tr>
+                </thead>
+                <!--Table head-->
+                <!--Table body-->
+                <tbody>
+                    <tr>
+                    <th scope="row">Titre de l'oeuvre, Auteur</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Date, Mouvement</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Procédés en lien avec la question</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Éléments de réponse à la question</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                </tbody>
+                <!--Table body-->
+                </table>
+                <!--Table-->
+                <p>Ensuite, il est bon de faire un tableau récapitulatif qui vous fera office de brouillon. Ainsi, pas besoin d'écrire un autre brouillon. Les axes sont construits grâce à la dernière colonne du précédent tableau.</p>
+				<br>
+                <!--Table1-->
+                <table id="tablePreview" class="table table-bordered">
+                <!--Table head-->
+                <thead>
+                    <tr>
+                    <th>#</th>
+                    <th>Texte 1</th>
+                    <th>Texte 2</th>
+                    <th>Texte 3</th>
+                    </tr>
+                </thead>
+                <!--Table head-->
+                <!--Table body-->
+                <tbody>
+                    <tr>
+                    <th scope="row">AXE 1</th>
+                    <td>Éléments axe 1 + texte 1</td>
+                    <td>Éléments axe 1 + texte 2</td>
+                    <td>Éléments axe 1 + texte 3</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">AXE 2</th>
+                    <td>Éléments axe 2 + texte 1</td>
+                    <td>Éléments axe 2 + texte 2</td>
+                    <td>Éléments axe 2 + texte 3</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">AXE 3</th>
+                    <td>Éléments axe 3 + texte 1</td>
+                    <td>Éléments axe 3 + texte 2</td>
+                    <td>Éléments axe 3 + texte 3</td>
+                    </tr>
+                </tbody>
+                <!--Table body-->
+                </table>
+                <!--Table-->
+                <h3 id='e4'>Etape 4 : Rédaction</h3>
+				<p>Rédigez un développement organisé (en plusieurs paragraphes) précédé d’une introduction (annonce du thème + présentation des textes) et suivi d’une conclusion (reprise de la question et des éléments de réponse).</p>
+				
+			</article>
+			<!-- /Article -->
+			
+			<!-- Sidebar -->
+			<aside class="col-sm-4 sidebar sidebar-right">
+
+				<div class="widget">
+					<h4>Résumé</h4>
+					<ul class="list-unstyled list-spaces">
+						<li><a href="#e1">Analyser la question</a><br><span class="small text-muted">De quoi parle-t-on?</span></li>
+						<li><a href="#e2">Lecture des textes</a><br><span class="small text-muted">Lire chaque texte.</span></li>
+						<li><a href="#e3">Comparer les textes</a><br><span class="small text-muted">Mise en évidence des points communs et des différences.</span></li>
+						<li><a href="#e4">Rédaction</a><br><span class="small text-muted">Organisation.</span></li>
+					</ul>
+				</div>
+
+			</aside>
+			<!-- /Sidebar -->
+		</div> <!-- /Row -->
+{% endblock %}
