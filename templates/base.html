@@ -45,7 +45,14 @@
 						</ul>
 					</li>
 					<li><a href="{% url 'contact' %}">Contact</a></li>
-					<li><a class="btn" href="{% url 'login' %}">CONNEXION</a></li>
+                    
+                    <!-- On change le connection en deco quand le user est connecté -->
+                    {% if user.is_authenticated %}
+                    <li><a class="btn" href="{% url 'logout' %}">DECONNEXION</a></li>
+	                {% else %}
+                    <li><a class="btn" href="{% url 'login' %}">CONNEXION</a></li>
+                    {% endif %}
+					
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -55,9 +62,17 @@
     <header id="head" class="secondary"></header><!--Barre noire en haut-->
 
 	<div class="container">
+        <!--Gestion des message de succès et d'erreur -->
+        {% if messages %}
+
+            {% for message in messages %}
+            <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+            {% endfor %}
+
+        {% endif %}
 
 	<ol class="breadcrumb">
-    	<li><a href="index.html">Accueil</a></li>
+    	<li><a href="{% url 'index' %}">Accueil</a></li>
 		<li class="active">Accès utilisateur</li>
 	</ol>
     {% block content %}
@@ -114,7 +129,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-6 widget">
+					<div class="col-md-6 widget canceled_on_phone">
 						<h3 class="widget-title">Informations techniques</h3>
 						<div class="widget-body">
 							<p>Méthodes + est publié sur heroku. Il utlisise la framework django.</p>
@@ -138,6 +153,7 @@
 								<a href="{% url 'commentaire' %}">Commentaire</a> |
 								<a href="{% url 'contact' %}">Contact</a> |
 								<b><a href="{% url 'login' %}">Connexion</a></b>
+                                
 							</p>
 						</div>
 					</div>

@@ -17,7 +17,8 @@
 							<p class="text-center text-muted">Déjà inscrit? <a href="{% url 'login' %}">Connectez-vous</a> dès maintenant! </p>
 							<hr>
 
-                                <form>
+                                <form method="post" action="signup">
+                                    {% csrf_token %}
                                     <div class="row top-margin">
                                         <div class="col-sm-6">
                                             {{ form.first_name }}                                    
@@ -45,7 +46,7 @@
                                     </div>
                                     <hr>
                                     <div class="col-lg-4 text-right">
-										    <button class="btn btn-action" type="submit">connexion</button>
+										    <button class="btn btn-action" type="submit">Inscription</button>
                                 	</div>
                                     <!--
                                     <div class="row">

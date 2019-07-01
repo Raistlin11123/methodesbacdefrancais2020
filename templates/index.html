@@ -44,12 +44,17 @@
 						</ul>
 					</li>
 					<li><a href="{% url 'contact' %}">Contact</a></li>
-					<li><a class="btn" href="{% url 'login' %}">CONNEXION</a></li>
-				</ul>
+                    
+                    {% if user.is_authenticated %}
+                    <li><a class="btn" href="{% url 'logout' %}">DECONNEXION</a></li>
+	                {% else %}
+                    <li><a class="btn" href="{% url 'login' %}">CONNEXION</a></li>
+                    {% endif %}				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
 	</div> 
 	<!-- /.navbar -->
+
     <header id="head" class="secondary"></header><!--Barre noire en haut-->
 
     	<!-- Header -->
@@ -69,6 +74,14 @@
 	<!-- Intro -->
 	
 	<!-- /Intro-->
+     <!--Gestion des message de succès et d'erreur -->
+    {% if messages %}
+
+        {% for message in messages %}
+        <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+        {% endfor %}
+
+    {% endif %}
 		
 	<!-- Highlights - jumbotron -->
 	<div class="jumbotron top-space">
@@ -98,7 +111,8 @@
 				<div class="col-md-3 col-sm-6 highlight">
 					<div class="h-caption"><h4><i class="fa fa-eur fa-5"></i>Gratuit</h4></div>
 					<div class="h-body text-center">
-						<p>Toutes nos méthodes sont gratuites pour que vous tous y ayez accès. Nous utilisons la publicité pour subvenir au besoin lié au site.</p>
+						<p>Toutes nos méthodes sont gratuites pour que vous tous y ayez accès. Nous utilisons un peu de publicité pour subvenir au besoin lié au site.
+                        <br>Si vous avez été satisfait par nos méthodes, n'hésitez pas à vous inscrire et à laissez un message grâce à la page "contact". Ou sinon, faites de même pour nous faire évoluer. Bonne chance pour le bac!</p>
 					</div>
 				</div>
 			</div> <!-- /row  -->
@@ -199,7 +213,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-6 widget">
+					<div class="col-md-6 widget canceled_on_phone">
 						<h3 class="widget-title">Informations techniques</h3>
 						<div class="widget-body">
 							<p>Méthodes + est publié sur heroku. Il utlisise la framework django.</p>
