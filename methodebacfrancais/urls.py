@@ -19,6 +19,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    #loaderio
+    path('loaderio-cecb139ae1c449d7f440fd22c5b440a2', views.loaderio, name='loaderio'),
     #Chemin vers l'administration
     path('admin/', admin.site.urls),
     #include vers l'enquête
